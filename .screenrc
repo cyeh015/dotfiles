@@ -1,0 +1,43 @@
+# hardstatus on
+# hardstatus alwayslastline '%{= G}[ %{G}%H %{g}][%= %{= w}%?%-Lw%?%{= R}%n*%f %t%?%{= R}(%u)%?%{= w}%+Lw%?%= %{= g}][%{B}%Y-%m-%d %{W}%c:%s %{g}]'
+# hardstatus alwayslastline '%{= G}[ %{G}%H %{g}][%= %{= w}%?%-Lw%?%{= R}%n*%f %t%?%{= R}(%u)%?%{= w}%+Lw%?%= %{= g}][ %{y}Load: %l %{g}][%{B}%Y-%m-%d %{W}%c:%s %{g}]'
+
+# caption always
+# caption always "%{-b ..}%-w%{+b ..}[[%n%f*%t]]%{-}%+w"
+# caption string "%{= bW}%3n %{y}%t %{-}%= %{m}%H%?%{-} -- %{c}%l%?%{-} -- %D %M %d %{y}%c"
+# caption string "%{= bW}%3n [%{y}%t %{-}]%= %{m}%H%?%{-} -- %{c}%l%?%{-} -- %D %M %d %{y}%c"
+
+defscrollback 100000
+vbell off
+vbellwait 1
+hardstatus on
+hardstatus alwayslastline
+hardstatus string "%{= kW} %H | %-Lw%{= bW} %n*%f %t %{-}%+Lw %=GNU Screen Help: Ctrl+A, ?"
+# hardstatus string "%{= kW} %H [%`] %{= Kw}|%{-} %-Lw%{= bW}%n%f %t%{-}%+Lw %=%C%a %Y-%M-%d"
+#
+# http://www.gnu.org/software/screen/manual/html_node/String-Escapes.html
+#
+# %{= wK} : set colors to bright white (W) on bright black (K) and keep current text styles (=)
+# %H      : hostname
+# [       : opening bracket character
+# %`      : print output of 'backtick' command (defined elsewhere in .screenrc)
+# ]       : closing bracket character
+# %{= wW} : set colors to white (w) on bright black (K) and keep current text styles (=)
+# |       : bar character
+# ${-}    : restore colors to previous colors / undo last color change
+# %-Lw    : list windows before current window (L [optional] = "include flags")
+# %{= bW} : set colors to bright white (W) on blue (b) and keep current text styles (=)
+# %f      : window flags
+# %t      : window title
+# %{-}    : restore colors to previous colors / undo last color change
+# %+Lw    : list windows after current window (L [optional] = "include flags")
+# %=      : expand to fill all space (used here to make remaining content flush right)
+# %C      : current time (12-hr; 24-hr is %c)
+# %a      : am/pm (lowercase; uppercase is %A)
+# %Y      : current year
+# -       : hyphen character
+# %m      : current month (0-padded; %M for "Jan" etc.)
+# -       : hyphen character
+# %d      : current date (0-padded)
+
+
