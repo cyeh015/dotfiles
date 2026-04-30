@@ -90,6 +90,12 @@ defaults write NSGlobalDomain KeyRepeat -int 1
 # Choose whether to enable moving focus with Tab and Shift Tab: 0 or 2
 defaults write NSGlobalDomain AppleKeyboardUIMode -int "2"
 
+# Fn key to change input language
+defaults write com.apple.HIToolbox AppleFnUsageType -int "1"
+
+# F1/... behave as standard function keys. fn + F1 to use the special features
+defaults write NSGlobalDomain com.apple.keyboard.fnState -bool true
+
 ###############################################################################
 # Screen                                                                      #
 ###############################################################################
@@ -106,6 +112,9 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int "2"
 ###############################################################################
 # Finder                                                                      #
 ###############################################################################
+
+# Desktop: use stack
+defaults write com.apple.finder DesktopViewSettings -dict-add UseStacks -bool true
 
 # Set Desktop as the default location for new Finder windows
 # For other paths, use `PfLo` and `file:///full/path/here/`
@@ -124,8 +133,17 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int "2"
 # Finder: show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
+# Finder: no warning when change file extension
+defaults write com.apple.finder "FXEnableExtensionChangeWarning" -bool "false"
+
 # Finder: show status bar
 defaults write com.apple.finder ShowStatusBar -bool true
+
+# Show path bar
+defaults write com.apple.finder "ShowPathbar" -bool "true"
+
+# Keep folders on top
+defaults write com.apple.finder "_FXSortFoldersFirst" -bool "true"
 
 # Finder: allow text selection in Quick Look
 # defaults write com.apple.finder QLEnableTextSelection -bool true
@@ -275,7 +293,7 @@ fi
 ###############################################################################
 
 # Disable in-app rating requests from apps downloaded from the App Store.
-# defaults write com.apple.appstore InAppReviewEnabled -int 0
+defaults write com.apple.appstore InAppReviewEnabled -int 0
 
 ###############################################################################
 # Kill/restart affected applications                                          #
