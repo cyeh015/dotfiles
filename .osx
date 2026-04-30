@@ -113,9 +113,7 @@ defaults write NSGlobalDomain com.apple.keyboard.fnState -bool true
 # Finder                                                                      #
 ###############################################################################
 
-# ! this does not work
-# Desktop: use stack
-# defaults write com.apple.finder DesktopViewSettings -dict-dict-add UseStacks -bool true
+# Desktop: use stacks
 defaults write com.apple.finder DesktopViewSettings -dict-add GroupBy -string "Kind"
 
 # Set Desktop as the default location for new Finder windows
