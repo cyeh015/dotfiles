@@ -3,3 +3,8 @@
 #   /usr/local for macOS on Intel
 #   /home/linuxbrew/.linuxbrew for Linux
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# bin
+PATH="$HOME/bin:$HOME/work/software/bin:${PATH}"
+export PATH
+
