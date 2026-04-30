@@ -200,6 +200,18 @@ defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 # defaults write com.apple.dock wvous-bl-corner -int 4
 # defaults write com.apple.dock wvous-bl-modifier -int 0
 
+# Autohide the Dock when the mouse is out
+defaults write com.apple.dock "autohide" -bool "true"
+# 𝗙𝗮𝘀𝘁𝗲𝗿 𝗗𝗼𝗰𝗸 𝗛𝗶𝗱𝗶𝗻𝗴:
+defaults write com.apple.dock autohide-delay -float 0
+defaults write com.apple.dock autohide-time-modifier -int 0
+# 𝗙𝗮𝘀𝘁𝗲𝗿 𝗗𝗼𝗰𝗸 𝗛𝗶𝗱𝗶𝗻𝗴 𝗨𝗻𝗱𝗼:
+# defaults write com.apple.dock autohide-delay -float 0.5
+# defaults write com.apple.dock autohide-time-modifier -int 0.5
+
+# enable by restart Dock
+killall Dock
+
 ###############################################################################
 # Safari & WebKit                                                             #
 ###############################################################################
