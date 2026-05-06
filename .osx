@@ -107,9 +107,9 @@ defaults write NSGlobalDomain com.apple.keyboard.fnState -bool true
 defaults write -g AppleLanguages -array en-US en-NZ zh-Hunt-NZ
 
 # add input method:
-defaults write com.apple.HIToolbox AppleEnabledInputSources -array-add '<dict><key>InputSourceKind</key><string>Non Keyboard Input Method</string><key>Bundle ID</key><string>com.apple.CharacterPaletteIM</string></dict>'
-defaults write com.apple.HIToolbox AppleEnabledInputSources -array-add '<dict><key>InputSourceKind</key><string>Keyboard Input Method</string><key>Bundle ID</key><string>com.apple.inputmethod.TCIM</string></dict>'
-defaults write com.apple.HIToolbox AppleEnabledInputSources -array-add '<dict><key>InputSourceKind</key><string>Input Mode</string><key>Bundle ID</key><string>com.apple.inputmethod.TCIM</string><key>Input Mode</key><string>com.apple.inputmethod.TCIM.Pinyin</string></dict>'
+# defaults write com.apple.HIToolbox AppleEnabledInputSources -array-add '<dict><key>InputSourceKind</key><string>Non Keyboard Input Method</string><key>Bundle ID</key><string>com.apple.CharacterPaletteIM</string></dict>'
+# defaults write com.apple.HIToolbox AppleEnabledInputSources -array-add '<dict><key>InputSourceKind</key><string>Keyboard Input Method</string><key>Bundle ID</key><string>com.apple.inputmethod.TCIM</string></dict>'
+# defaults write com.apple.HIToolbox AppleEnabledInputSources -array-add '<dict><key>InputSourceKind</key><string>Input Mode</string><key>Bundle ID</key><string>com.apple.inputmethod.TCIM</string><key>Input Mode</key><string>com.apple.inputmethod.TCIM.Pinyin</string></dict>'
 
 ###############################################################################
 # Screen                                                                      #
