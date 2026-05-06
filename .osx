@@ -103,6 +103,9 @@ defaults write com.apple.HIToolbox AppleFnUsageType -int "1"
 # F1/... behave as standard function keys. fn + F1 to use the special features
 defaults write NSGlobalDomain com.apple.keyboard.fnState -bool true
 
+# Languages:
+defaults write -g AppleLanguages -array en-US en-NZ zh-Hunt-NZ
+
 ###############################################################################
 # Screen                                                                      #
 ###############################################################################
